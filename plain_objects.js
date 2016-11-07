@@ -28,3 +28,26 @@ pic1.like();
 pic2.like();
 console.log("Pic1 liked: " + pic1.timesLiked + " times");
 console.log("Pic2 liked: " + pic2.timesLiked + " times");
+
+
+// Two
+//
+// Given this function
+
+function hate() {
+  this.timesLiked--;
+}
+
+// Apply it to the `pic1` and `pic2` without attaching the function to the objects themselves, using either the `apply` or `call` method.
+
+// Using apply method
+hate.apply(pic1);
+hate.apply(pic2);
+console.log("Pic1 liked: " + pic1.timesLiked + " times");
+console.log("Pic2 liked: " + pic2.timesLiked + " times");
+
+// Using call method
+hate.call(pic1);
+hate.call(pic2);
+console.log("Pic1 liked: " + pic1.timesLiked + " times");
+console.log("Pic2 liked: " + pic2.timesLiked + " times");
