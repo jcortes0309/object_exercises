@@ -23,3 +23,21 @@ console.log("First name:", daughter.firstName);
 console.log("Last name:", daughter.lastName);
 console.log("Hair color:", daughter.hairColor);
 console.log("Eye color:", daughter.eyeColor);
+
+// Two
+//
+// Add a method called showInfo to mom by attaching a function to it. Calling this method will print out all four properties.
+
+mom.showInfo = function() {
+  console.log("First name:", this.firstName);
+  console.log("Last name:", this.lastName);
+  console.log("Hair color:", this.hairColor);
+  console.log("Eye color:", this.eyeColor);
+};
+
+console.log("");
+console.log("");
+mom.showInfo();
+console.log("");
+console.log("");
+daughter.showInfo();
