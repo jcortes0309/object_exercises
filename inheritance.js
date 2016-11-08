@@ -96,7 +96,7 @@
 // var hero = new Hero();
 // hero.attack(goblin);
 //
-// Five
+// Four
 //
 // Given this Person type:
 //
@@ -109,15 +109,34 @@
 // };
 //
 // Rewrite the above type by inlining it's greet method into it's constructor.
+//
+// function Person(name) {
+//   this.name = name;
+//   this.greet = function (other) {
+//     console.log('Hello ' + other.name + '! My name is ' + this.name + '.');
+//   };
+// }
+//
+// var john = new Person('John');
+// var mary = new Person('Mary');
+// john.greet(mary);
+// console.log(john);
+//
+// Five
+//
+// Take the previous Person type and rewrite it in factory function form.
+function createPerson(name) {
+  var person = {
+    name: name
+  };
 
-function Person(name) {
-  this.name = name;
-  this.greet = function (other) {
+  person.greet = function(other) {
     console.log('Hello ' + other.name + '! My name is ' + this.name + '.');
   };
+  return person;
 }
 
-var john = new Person('John');
-var mary = new Person('Mary');
+var john = new createPerson('John');
+var mary = new createPerson('Mary');
 john.greet(mary);
 console.log(john);
